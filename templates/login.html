@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Authorization</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="column is-4 is-offset-4">
+    {% with messages = get_flashed_messages() %}
+        {% for msg in messages %}
+            <div class="notification is-danger">
+                {{ msg }}
+            </div>
+        {% endfor %}
+    {% endwith %}
+    <h3 class="title">Login</h3>
+    <div class="box">
+        <form method="post">
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="email" name="email" placeholder="Your Email" autofocus="">
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="password" name="password" placeholder="Your Password">
+                </div>
+            </div>
+            <div class="field">
+                <label class="checkbox">
+                    <input type="checkbox">
+                    Remember me
+                </label>
+            </div>
+            <button class="button is-block is-info is-large is-fullwidth" formaction="/login">
+                Login
+            </button>
+            <button class="button is-block is-info is-large is-fullwidth" formaction="/register">
+                Register
+            </button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

@@ -22,7 +22,7 @@
     width: 100%;
     text-align: right;
     color: silver;
-    margin-bottom: -7px;
+    margin-bottom: -3px;
     margin-top: auto;
 }
 
@@ -65,8 +65,8 @@
 
 .frame {
     background: #e0e0de;
-    height: 450px;
-    overflow: hidden;
+    height: 768px;
+    overflow: auto;
     padding: 0;
 }
 
@@ -85,7 +85,6 @@ ul {
     bottom: 32px;
     display: flex;
     flex-direction: column;
-
 }
 
 .msj:before {
@@ -114,6 +113,10 @@ ul {
 
 input:focus {
     outline: none;
+}
+
+li {
+    padding-bottom: 25px;
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */

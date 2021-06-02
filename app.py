@@ -82,6 +82,7 @@ def login():
 
 
 @app.route('/api/bot', methods=['POST'])
+@login_required
 def bot_answer():
     return request.data
 
